@@ -39,6 +39,57 @@ print(b) #[10, 20, 'Hello', [True, 3.14], 50]
 * 차이점
 list는 [ ]으로 둘러쌈, tuple은 ( )으로 둘러싼다.
 리스트 내의 원소를 변경할 수 있지만 tuple은 불가능 -> .append가 불가능하다
+```python
+a = (10, 20, 30, 40, 50)
+print(a) #결과 (10,20,30,40,50)
+```
+## 3.Dictionary
+* Dictionary는 Key와Value을 한 쌍으로 해서 데이터를 저장한다.
+* 작성 방법은 다음과 같다
+* score = {"kim":90, "lee":85, "jun":95} #여기서 kim이 Key이고 90이 Value 이다.
+```python
+score = {"kim":90, "LEE":85, "JUN":95}
+print(score)
+```
+
+## 4.String
+* Python 문자열(string)은 사용법은 4가지가 있다.
+* 
+1. 큰따옴표(")로 양쪽 둘러싸기
+```
+"Hello World"
+```
+2. 작은따옴표(')로 양쪽 둘러싸기
+```
+'Python is fun'
+```
+3. 큰따옴표 3개를 연속(""")으로 써서 양쪽 둘러싸기
+```
+"""Life is too short, You need python"""
+```
+4. 작은따옴표 3개를 연속(''')으로 써서 양쪽 둘러싸기
+```
+'''Life is too short, You need python'''
+```
+* string 내의 각각의 값 또한 문자열로 인식되며, 문자열을 분리하여 list로 반환하는 split( ) 함수는 머신러닝 코드에서 문자열 데이터 전처리(pre-process)하기 위해 자주 사용된다.
+```python
+a = "A73,CD"
+print(a) # 결과 A73,CD -> 0칸에 A, 1칸에7, 2칸에 3, 3칸에 , ,4칸에 C, 5칸에 D 값이 있다. 
+print(a[3])
+b = a.split('3') #split 함수 사용법은 append 함수 사용법과 동일하다. 
+print(b) # 결과 ['A7', ',CD'] separator 3을 기준으로 A7 과  ,CD 가 나왔다
+```
+## useful function
+* type( ) len( ) size( ) list( ) str( ) int( )
+* type(data)는 입력 data의 데이터 타입을 알려주는 함수
+* len(data)은 입력 데이터의 길이(요소의 개수)를 알려주는 함수
+* size(data) 함수는 모든 원소의 개수를 알려주는 함수
+* list(data)는 압력 data를 리스트로 만들어 리턴하는 함수
+* str(data)는 입력되는 data를 문자열로 반환하여 리턴하는 함수
+* int(data)는 문자열 형태로 입력되는 숫자나 소주점이 있는 숫자등을 정수 형태로 리턴하는 함수
+
+
+
 
 
 
