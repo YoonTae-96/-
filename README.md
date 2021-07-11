@@ -89,9 +89,113 @@ print(b) # 결과 ['A7', ',CD'] separator 3을 기준으로 A7 과  ,CD 가 나�
 * int(data)는 문자열 형태로 입력되는 숫자나 소주점이 있는 숫자등을 정수 형태로 리턴하는 함수
 
 
+## 조건문, 반복문
+* 조건 if문
+* 파이썬은 코딩블럭을 표시하기 위해 들여쓰기(indentation)를 사용함 즉, c,java등과 같이 코딩블럭을 { }으로 나타내지 않음
+* 동일한 블럭의 들여쓰기는 모두 동일 후의 공백을 사용해야함
+```python
+a = 1
+if a > 0:
+    print("a==", a)
+    print("positive number")
+elif a == 0: #elif는 조건을 여러개 주기 위해 사용된다.
+    print("a==", a)
+    print("zero")
+else:
+    print("a==", a)
+    print("negative number")
+```    
+```python
+list_data = [10, 20, 30, 40, 50]
+dict_data = {'key1': 1, 'key2': 2}
 
+if 45 in list_data:
+    print("45 is in list_data")
+else:
+    print("45 is not in list_data")
 
+if 'key1' in dict_data:
+    print("key1 is in dict_data")
+else:
+    print("key1 is not in dict_data")
+```
 
+* 반복문 for
+* for variable in range( ): #사용법 
+```python
+for data in range(10): #range( ) 함수는 시작값~마지막 값-1
+    print(data, "", end='')
+```
+```python
+for data in range(10): #range( ) 함수는 시작값~마지막 값-1
+    print(data, "", end='')
+
+for data in range(0,10):
+    print(data, "", end='')
+
+for data in range(0,10,2):
+    print(data, "", end='')
+```
+
+## end=
+* end옵션을 사용하면 그 뒤의 출력값과 이어서 출력한다. (즉, 줄바꿈을 하지 않게 된다.)
+```python
+print("I like", end=" ")
+print("money")
+```
+출력 >>>>> I like money
+* 그리고, 저 end=' ' 사이에 무언가를 입력하게되면, sep와 비슷한 기능을 한다.(구분자를 사용할 수 있다) 첫번째 출력문과, 두번째 출력문 사이에 end에 넣어준 문자열이 출력된다.
+```python
+print("I like", end=" gold and ")
+print("money")
+
+출력 >>>>> I like gold and money
+```
+* for variable in list,dict...:
+```python
+list_data = [10, 20, 30, 40, 50]
+
+ for data in list_data:
+    print(data, "", end='') # key값만 출력된다 /value 값은 출력되지 않는다.
+
+dict_data = {'key1': 1, 'key2': 2}
+
+for data in dict_data:
+    print(data, "", end='')
+
+for key, value in dict_data.items():
+    print(key, "", value)
+```
+## for ~ dict문에서 key, value 값 출력하기
+* for 키, 값 in 딕셔너리.items( ): #in 뒤의 딕셔너리.items( )을 딕셔너리.key( ) 혹은 딕셔너리.value( )을 이용해 key,value 값을 따로따로 볼 수도 있다. 
+ex) for key in 딕셔너리.key( )
+
+```python     
+x = {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+for key, value in x.items():
+    print(key, "", value)
+a 10
+b 20
+c 30
+d 40
+```
+
+* 반복문 lsit comprehension -> list안에 for문이 들어있는 형태
+```python
+raw_data = [[1, 10], [2, 15], [3, 30], [4, 55]]
+all_data = [x for x in raw_data]
+x_data = [x[0] for x in raw_data]
+
+print("all_data==", all_data)
+print("x_data==", x_data)
+
+all_data== [[1, 10], [2, 15], [3, 30], [4, 55]]
+x_data== [1, 2, 3, 4]
+```
+
+* 반복분 while,break,continue
+
+# 
 
 
 
