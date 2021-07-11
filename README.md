@@ -232,7 +232,41 @@ print_name("DAVE") #print_name("DAVE", 5) -> DAVE 다섯번 출력함
 * => 입력 파라미터가 mutable(list, dic, numpy 등) 데이터형인 경우는 원래의 데이터에 변형이 일어남.
 * => immutable(숫자, 문자, tuple 등)은 원래의 데이터에 변형이 일어나지 않음.
 ```python
+def mutable_immutable_func(int_x, input_list):
+    int_x +=1
+    input_list.append(100)
+x=1
+test_list = [1, 2, 3]
+mutable_immutable_func(x, test_list)
+print("x==", x ,",test_list ==", test_list)
+x== 1 ,test_list == [1, 2, 3, 100] # immtubale(숫자,문자,tuple 등)은 원래의 데이터에 변형이 일어나지 않음.
+```
+* lambda
+* => lambda는 한 줄로 함수를 작성하는 방법으로, 익명(anonymous) 함수 또는 람다 표현식(lambda expression)등으로 불림
+* => lambda는 다른 함수의 인수(parameter)로 넣을때 주로 사용하며, 특히 머신 러닝에서 미분을 계산하기 위해 필요한 수치미분과 활성화 함수 등을 표현할때, 수학에서 함수 표현처럼 사용되며 마지막 표현으로 대체된다는 의미이다.
+* => 함수명 = lambda 입력1, 입력2... : 대체되는 표현식
+```python
+f = lambda x: x + 100
+for i in range(3):
+    print(f(i))
+```
 
+```python
+# lambda에서 입력 값을 반드시 이용할 필요는 없다.
+def print_hello():
+    print("Hello python")
+def test_lambda(s,t):
+    print("input1==", s, ",input2==", t)
+
+s=100
+t=200
+
+fx = lambda x,y : test_lambda(s,t)
+fy = lambda x,y : print_hello()
+
+fx(500, 1000)
+fy(300, 600)
+```
 
 
 
