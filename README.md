@@ -195,7 +195,46 @@ x_data== [1, 2, 3, 4]
 
 * 반복분 while,break,continue
 
-# 
+# function, lambda
+* 함수정의
+=>특정기능을 수행하는 function는 파이썬에서 다음과 같이 정의함.
+* def 함수이름 (입력1, 입력2,...):
+```python
+def sum(x, y):
+    s = x + y
+    return s
+
+
+result = sum(10, 20)
+print(result)
+```
+* 함수 반환 값
+=> 파이썬 함수는 한개 이상의 return 값을 반환할 수 있음. return 값은 , 로 분리하여 받거나 tuple 형태로 받을 수 있음
+```python
+def mulit_ret_func(x):
+    return x + 1, x + 2, x + 3 # return(x+1, x+2, x+3)
+
+
+x = 100
+y1, y2, y3 = mulit_ret_func(x) # (y1, y2, y3)= mulit_ret_func(x)
+print(y1, y2, y3)
+```
+* default parameter
+* => 함수의 입력 파라미터에 기본값을 저장하는 것
+* => 이러한 default parameter는, 함수가 호출되었을 경우 입력 파라미터에 명시적인 값이 전달되지 않으면 기본으로 저장한 값을 사용하겠다는 의미이다.
+```python
+def print_name (name, count=2):
+    for i in range(count):
+        print("name==", name)
+print_name("DAVE") #print_name("DAVE", 5) -> DAVE 다섯번 출력함
+```
+* mutable / immutable parameter
+* => 입력 파라미터가 mutable(list, dic, numpy 등) 데이터형인 경우는 원래의 데이터에 변형이 일어남.
+* => immutable(숫자, 문자, tuple 등)은 원래의 데이터에 변형이 일어나지 않음.
+```python
+
+
+
 
 
 
