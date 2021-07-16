@@ -290,7 +290,10 @@ fy(300, 600)
 * numpy: 머신러닝 코드 개발할 경우 자주 사용되는 벡터, 행렬 등을 표현하고 연산할떄 반드시 필요한 라이브러리
 * numpy vs list => 머신러닝에서 숫자, 사람, 동물등의 인식을 하기 위해서는 이미지 데이터를 행렬(matrix)로 변환하는 것이 중요함 => 행렬 연산을 하기 위해서는 numpy 필수!
 * 벡터 생성 => vextor은 np.arry([])를 사용하여 생성함(import numpy as np) => 머신러닝 코드 구현시, 연산을 위해서 vector, matrix등의 형상(shape), 차원(dimension)을 확인하는 것이 
-
+* 벡터 산술 연산 => vector 간 (+,-,*,/) 은 벡터의 각각의 원소에 대해서 행해짐
+* reshape 가능: 벡터를 행렬로 reshape 가능
+* 행렬곱 (dot productor)
+# 수치미분
 
 
 
